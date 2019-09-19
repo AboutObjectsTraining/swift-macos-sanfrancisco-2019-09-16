@@ -16,4 +16,12 @@ class CoolView: NSView
     override func mouseDragged(with event: NSEvent) {
         frame = frame.offsetBy(dx: event.deltaX, dy: -event.deltaY)
     }
+    
+    override func mouseDown(with event: NSEvent) {
+        alphaValue = 0.5
+    }
+    
+    override func mouseUp(with event: NSEvent) {
+        alphaValue = 1
+    }
 }
