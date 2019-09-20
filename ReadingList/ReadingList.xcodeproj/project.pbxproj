@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B418FA892326E360008974FF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B418FA882326E360008974FF /* MainWindow.xib */; };
 		B418FA8B2326FA5A008974FF /* AddRemoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B418FA8A2326FA5A008974FF /* AddRemoveView.swift */; };
-		B4837BC02325B26900A67E1F /* MainWindow-bck.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4837BBF2325B26900A67E1F /* MainWindow-bck.xib */; };
 		B485AD9A23254FC000061AF2 /* ReadingListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B485AD9823254FC000061AF2 /* ReadingListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B485AD9D23254FC000061AF2 /* ReadingListModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B485AD9623254FC000061AF2 /* ReadingListModel.framework */; };
 		B485AD9E23254FC000061AF2 /* ReadingListModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B485AD9623254FC000061AF2 /* ReadingListModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,7 +28,6 @@
 		B485AE232325526800061AF2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485AE182325526800061AF2 /* Colors.xcassets */; };
 		B485AE472325539500061AF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485AE452325539500061AF2 /* Main.storyboard */; };
 		B4DC75322325B812002A5B1E /* ReadingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B485ADB32325502C00061AF2 /* ReadingList.plist */; };
-		B4DC753423267D4F002A5B1E /* MainWindow copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DC753323267D4F002A5B1E /* MainWindow copy.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +57,6 @@
 /* Begin PBXFileReference section */
 		B418FA882326E360008974FF /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		B418FA8A2326FA5A008974FF /* AddRemoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveView.swift; sourceTree = "<group>"; };
-		B4837BBF2325B26900A67E1F /* MainWindow-bck.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-bck.xib"; sourceTree = "<group>"; };
 		B485AD7E23254F9C00061AF2 /* ReadingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485AD8A23254F9D00061AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B485AD8B23254F9D00061AF2 /* ReadingList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReadingList.entitlements; sourceTree = "<group>"; };
@@ -82,7 +79,6 @@
 		B485AE172325526800061AF2 /* EditBookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookController.swift; sourceTree = "<group>"; };
 		B485AE182325526800061AF2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B485AE462325539500061AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B4DC753323267D4F002A5B1E /* MainWindow copy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainWindow copy.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +129,6 @@
 				B485AE162325526800061AF2 /* ReadingListDataSource.swift */,
 				B418FA8A2326FA5A008974FF /* AddRemoveView.swift */,
 				B485AE452325539500061AF2 /* Main.storyboard */,
-				B4DC753323267D4F002A5B1E /* MainWindow copy.xib */,
-				B4837BBF2325B26900A67E1F /* MainWindow-bck.xib */,
 				B418FA882326E360008974FF /* MainWindow.xib */,
 				B485AE0E2325526800061AF2 /* Base.lproj */,
 				B485AE132325526800061AF2 /* Assets.xcassets */,
@@ -263,9 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DC753423267D4F002A5B1E /* MainWindow copy.xib in Resources */,
 				B485AE232325526800061AF2 /* Colors.xcassets in Resources */,
-				B4837BC02325B26900A67E1F /* MainWindow-bck.xib in Resources */,
 				B485AE472325539500061AF2 /* Main.storyboard in Resources */,
 				B485AE1A2325526800061AF2 /* Authors.xcassets in Resources */,
 				B485AE1E2325526800061AF2 /* Assets.xcassets in Resources */,

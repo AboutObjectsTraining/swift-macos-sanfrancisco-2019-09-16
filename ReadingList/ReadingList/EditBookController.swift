@@ -15,15 +15,12 @@ struct ToolbarLabels {
 
 class EditBookController: NSViewController
 {
+    // MARK: - Outlets
     @IBOutlet var dataSource: ReadingListDataSource!
     @IBOutlet weak var splitView: NSSplitView!
     @IBOutlet weak var detailView: NSView!
     @IBOutlet var tableView: NSTableView!
     @IBOutlet weak var tableScrollView: NSScrollView!
-    
-    lazy var book = dataSource.currentBook
-    var hasNext: Bool { return dataSource.hasNext }
-    var hasPrevious: Bool { return dataSource.hasPrevious }
     
     @IBOutlet var titleField: NSTextField!
     @IBOutlet var yearField: NSTextField!
@@ -39,6 +36,11 @@ class EditBookController: NSViewController
     @IBOutlet var prevButton: NSButton!
     @IBOutlet var saveButton: NSButton!
     
+    // MARK: - Other properties
+    lazy var book = dataSource.currentBook
+    var hasNext: Bool { return dataSource.hasNext }
+    var hasPrevious: Bool { return dataSource.hasPrevious }
+    
     var isSplitViewCollapsed: Bool {
         guard let window = view.window else { return false }
         return window.frame.size.width == splitViewCollapsedWidth
@@ -46,6 +48,7 @@ class EditBookController: NSViewController
     var splitViewCollapsedWidth: CGFloat { return detailView.frame.size.width + 1 }
     var splitViewExpandedWidth: CGFloat { return splitViewCollapsedWidth + 300 }
     
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.window?.title = dataSource.readingList.title
@@ -65,14 +68,11 @@ class EditBookController: NSViewController
         validateButtons()
         view.animator()
     }
-    
-    private func validateButtons() {
-        guard let window = view.window else { return }
-        saveButton.isEnabled = window.isDocumentEdited
-        prevButton.isEnabled = dataSource.hasPrevious
-        nextButton.isEnabled = dataSource.hasNext
-    }
-    
+}
+
+// MARK: - Data management
+extension EditBookController
+{
     private func populateFields() {
         titleField.stringValue = book?.title ?? ""
         yearField.stringValue  = book?.year ?? ""
@@ -89,6 +89,13 @@ class EditBookController: NSViewController
         validateButtons()
     }
     
+    private func validateButtons() {
+        guard let window = view.window else { return }
+        saveButton.isEnabled = window.isDocumentEdited
+        prevButton.isEnabled = dataSource.hasPrevious
+        nextButton.isEnabled = dataSource.hasNext
+    }
+    
     private func updateBook() {
         book?.title = titleField.stringValue
         book?.year = yearField.stringValue
@@ -102,14 +109,18 @@ class EditBookController: NSViewController
         view.window?.isDocumentEdited = isEdited
         validateButtons()
     }
-    
+}
+
+// MARK: - Action methods
+extension EditBookController
+{
     @IBAction func showSidebar(_ sender: NSToolbarItem) {
         sender.label = isSplitViewCollapsed ? ToolbarLabels.showSidebar : ToolbarLabels.hideSidebar
         let newWidth = isSplitViewCollapsed ? splitViewExpandedWidth : splitViewCollapsedWidth
         animateShowSidebar(duration: 1, newWidth: newWidth)
     }
     
-    func animateShowSidebar(duration: TimeInterval, newWidth: CGFloat) {
+    private func animateShowSidebar(duration: TimeInterval, newWidth: CGFloat) {
         guard let window = view.window else { return }
         var newFrame = window.frame
         newFrame.size.width = newWidth
@@ -149,7 +160,7 @@ class EditBookController: NSViewController
         if favoriteCheckbox.state == .on { animateFavorite() }
     }
     
-    func animateFavorite() {
+    private func animateFavorite() {
         guard let layer = heartLabel.animator().layer else { return }
         layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
         
