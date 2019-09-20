@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:StringProcessingService/StringProcessingService.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StringProcessing/StringProcessing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TextEditor/TextEditor.xcodeproj">
+   </FileRef>
+</Workspace>
