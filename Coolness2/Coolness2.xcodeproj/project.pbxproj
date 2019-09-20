@@ -12,6 +12,7 @@
 		B4FCD9D1233433F400E34C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCD9CE233433F400E34C39 /* AppDelegate.swift */; };
 		B4FCD9D2233433F400E34C39 /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCD9CF233433F400E34C39 /* CoolView.swift */; };
 		B4FCD9D3233433F400E34C39 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCD9D0233433F400E34C39 /* BackgroundView.swift */; };
+		B4FE4590233556D40097D244 /* CoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE458F233556D40097D244 /* CoolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B4FCD9CE233433F400E34C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FCD9CF233433F400E34C39 /* CoolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		B4FCD9D0233433F400E34C39 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B4FE458F233556D40097D244 /* CoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B4FCD9CE233433F400E34C39 /* AppDelegate.swift */,
 				B4FCD9D0233433F400E34C39 /* BackgroundView.swift */,
 				B4FCD9CF233433F400E34C39 /* CoolView.swift */,
+				B4FE458F233556D40097D244 /* CoolViewController.swift */,
 				B4FCD9BB2334322700E34C39 /* Assets.xcassets */,
 				B4FCD9BD2334322700E34C39 /* MainMenu.xib */,
 				B4FCD9C02334322700E34C39 /* Info.plist */,
@@ -142,6 +145,7 @@
 				B4FCD9D3233433F400E34C39 /* BackgroundView.swift in Sources */,
 				B4FCD9D1233433F400E34C39 /* AppDelegate.swift in Sources */,
 				B4FCD9D2233433F400E34C39 /* CoolView.swift in Sources */,
+				B4FE4590233556D40097D244 /* CoolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
